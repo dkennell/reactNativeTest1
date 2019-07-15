@@ -7,6 +7,7 @@
  */
 
 import React, {Fragment} from 'react';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
 import {
   SafeAreaView,
   StyleSheet,
@@ -24,20 +25,32 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App = () => {
-  return (
-    <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic">
-          <View>
-            <Text>asfd</Text>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </Fragment>
-  );
-};
+import HomeScreen from './HomeScreen'
+import Appy from './Appy'
+
+// const App = () => {
+//   return (
+//     <Fragment>
+//       <StatusBar barStyle="dark-content" />
+//       <SafeAreaView>
+//         <ScrollView
+//           contentInsetAdjustmentBehavior="automatic">
+//           <View>
+//             <Text>asfd</Text>
+//           </View>
+//         </ScrollView>
+//       </SafeAreaView>
+//     </Fragment>
+//   );
+// };
+//
+// export default App;
+
+const MainNavigator = createStackNavigator({
+  Home: {screen: HomeScreen},
+  Profile: {screen: Appy},
+});
+
+const App = createAppContainer(MainNavigator);
 
 export default App;
