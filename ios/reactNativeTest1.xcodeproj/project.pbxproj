@@ -17,6 +17,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* reactNativeTest1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* reactNativeTest1Tests.m */; };
+		3ACE09CD22DD463300E6D063 /* libVoice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACE09CC22DD435B00E6D063 /* libVoice.a */; };
 		52E565B2A729BF4FC33CE0D0 /* libPods-reactNativeTest1-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E09DF4D42EF4F41740B2F91 /* libPods-reactNativeTest1-tvOSTests.a */; };
 		7C57BB579837A5392768D3EC /* libPods-reactNativeTest1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F09C75FEC7AF54F14FF40691 /* libPods-reactNativeTest1.a */; };
 		9CD976A8F638ABA80C54A973 /* libPods-reactNativeTest1-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA6E8AB5B6D9AAD1C42A53B /* libPods-reactNativeTest1-tvOS.a */; };
@@ -37,6 +38,13 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "reactNativeTest1-tvOS";
 		};
+		3ACE09CB22DD435B00E6D063 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3ACE09C722DD435B00E6D063 /* Voice.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC0729B51EF78E41004EBC83;
+			remoteInfo = Voice;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +62,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = reactNativeTest1/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* reactNativeTest1-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "reactNativeTest1-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* reactNativeTest1-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "reactNativeTest1-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ACE09C722DD435B00E6D063 /* Voice.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Voice.xcodeproj; path = "../node_modules/react-native-voice/ios/Voice.xcodeproj"; sourceTree = "<group>"; };
 		59CB0DCD7EA4017A6F85A137 /* Pods-reactNativeTest1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTest1Tests.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeTest1Tests/Pods-reactNativeTest1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6EBC59B143E3624504E97201 /* Pods-reactNativeTest1-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTest1-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeTest1-tvOS/Pods-reactNativeTest1-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		829EAA849D2A4189FFA8E9CA /* Pods-reactNativeTest1-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTest1-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-reactNativeTest1-tvOSTests/Pods-reactNativeTest1-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ACE09CD22DD463300E6D063 /* libVoice.a in Frameworks */,
 				7C57BB579837A5392768D3EC /* libPods-reactNativeTest1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,7 +158,6 @@
 				59CB0DCD7EA4017A6F85A137 /* Pods-reactNativeTest1Tests.debug.xcconfig */,
 				B7A6A9B8D680D7042F0BA5E9 /* Pods-reactNativeTest1Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -165,9 +174,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3ACE09C822DD435B00E6D063 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3ACE09CC22DD435B00E6D063 /* libVoice.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				3ACE09C722DD435B00E6D063 /* Voice.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -308,12 +326,19 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3ACE09C822DD435B00E6D063 /* Products */;
+					ProjectRef = 3ACE09C722DD435B00E6D063 /* Voice.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* reactNativeTest1 */,
@@ -323,6 +348,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3ACE09CC22DD435B00E6D063 /* libVoice.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVoice.a;
+			remoteRef = 3ACE09CB22DD435B00E6D063 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
